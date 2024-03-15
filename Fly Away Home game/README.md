@@ -3,7 +3,7 @@
 In a land far far away, assuming a pond in the backyard, one lost little fly called Mosca just found a map home. Along its way lie hungry predators like frogs and spiders ready to hunt down and devour Mosca. "Draw" Mosca a way home on the map that also avoids such terrifying forces!
 <br> SNEAK PEEK AT CHARACTERS IN THE GAME:
 <br> <img src="frog.png" width="200" height="200" /> <img src="Moscathefly.png" width="200" height="200" /> <img src="spider.png" width="200" height="200" />
-<br> FROG       MOSCA       SPIDER
+<br> FROG                           MOSCA                               SPIDER
 
 ### How the world works:
 Read and process a text file with the following format: the first line indicates the dimensions of the world (row x column), and the rest of the text lays out how the world is gonna look. Maybe there's no rectangular/square land with a pond but just pretend there was right now. A square/rectangle land suspended mid-air. The game characters are represented with 1 single uncapitalized letter: **s** for *start*, Mosca's starting position; **h** for *home* where Mosca needs to get; **f** for *frog*, which will likely come in multiple; **a** for *another predator*, in this case spiders, as if Mosca's livelihood is not already under imminent threat; finally, **.** for a blank square.
@@ -33,3 +33,5 @@ on the same square or an immediately adjacent square (above/ below/ left/ right)
 
 ### How spider operate:
 Spiders are almost like frogs (1 space a time, respect other predators, no off-grid) except they are more cunning. They randomly move **CLOSER** to Mosca. If a spider and Mosca are on the same row and column, and Mosca tries to move within the same column/row, the spider will move 1 space closer. If Mosca and a spider are on a different row/col now, the spider has 2 options: move CLOSER horizontally or vertically. Whether it will move UP or DOWN or RIGHT or LEFT depends on its current relative position to the fly (above or below? further left or further right?).
+
+### GOAL: Get Mosca home in one piece!
