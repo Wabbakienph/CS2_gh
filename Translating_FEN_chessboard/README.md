@@ -6,7 +6,8 @@ representation. Each chess piece in FEN is represented by a single character as 
 <br> P  N  B  R  Q  K
 <br> (pawn - knight - bishop - rook - queen - king)
 
-The **objective** is to read in a file containing a single line in FEN notation and print a 2D char array chessboard. Here is an example output using the above
+The **objective** is to read in a file containing a single line in FEN notation and print a 2D char array chessboard. The FEN notation string will look something like this: **rn3rk1/pbppq1pp/1p2pb2/4N2Q/3PN3/3B4/PPP2PPP/R3K2R/**.
+<br> Here is an example output using the above
 position:
 <br> $ java ReadFEN valid3.txt
 <br> rn...rk.
