@@ -19,7 +19,7 @@ public class ReadFEN {
     public static void main(String[] args) {
         // Check if at least 1 argument is provided
         if (args.length == 0) {
-            System.out.println("How to run: java ReadFEN <input_file>");
+            System.out.println("No input detected. To run: java ReadFEN <input_file>");
             return;
         }
 
@@ -35,7 +35,7 @@ public class ReadFEN {
                 inputFENBuilder.append(scanner.nextLine()).append("\n");
             }
 
-            String inputFEN = inputFENBuilder.toString();
+            String inputFEN = inputFENBuilder.toString().trim();
             
             if (validFEN(inputFEN)) {
                 char[][] chessboard = convertFENtoChessboard(inputFEN);
@@ -45,18 +45,24 @@ public class ReadFEN {
                     }
                     System.out.println();
                 } 
-            } else {
-                System.out.println("invalid FEN format");
-            }    
+            } 
+              
             scanner.close();
         } catch (Exception e) {
             System.out.println("Error reading the input file: " + e.getMessage());
         }
     }
+
     public static boolean validFEN(String fen) {
+        if (!fen.contains("/")) {
+            System.out.println("Invalid format");
+            return false;
+        }
+
         String[] rows = fen.split("/");
         
-        int rowAcc = 0;
+        int rowAcc = 0;// count rows
+
         // Check each row for valid characters and lengths
          for (String row : rows) {
             if (!row.trim().isEmpty()) { // handling the "" after the trailing /
@@ -66,15 +72,18 @@ public class ReadFEN {
 
                 // check if each row contains exactly 8 squares of information.
                 if (!checkRow(fenRow)) {
+                    System.out.println("Invalid. There should be 8 pieces of information in a row.");
                     return false;
                 }
 
                 for (int i = 1; i < fenRow.length; i++) {
                     // Check if the character is a valid chess piece or a number 
                     if (!Character.toString(fenRow[i]).matches("[pnbrqkPNBRQK1-8]")) {
+                        System.out.println("Invalid info. Should be either a chess piece or a number");
                         return false;
                     }  else { // if it's, check to ensure 2 or more consecutive numbers are not next to each other
                         if (Character.isDigit(fenRow[i-1]) && Character.isDigit(fenRow[i])) {
+                            System.out.println("Invalid: Cannot have 2/more consecutive numbers ");
                             return false;
                         }
                     }
@@ -83,6 +92,7 @@ public class ReadFEN {
         }
         // Check if there are exactly 8 rows
         if (rowAcc != 8) {
+            System.out.println("Invalid. There should be 8 rows.");
             return false;
         }
 
