@@ -19,7 +19,7 @@ public class ReadFEN {
     public static void main(String[] args) {
         // Check if at least 1 argument is provided
         if (args.length == 0) {
-            System.out.println("No input detected. To run: java ReadFEN <input_file>");
+            System.out.println("invalid - no input detected. To run: java ReadFEN <input_file>");
             return;
         }
 
@@ -72,18 +72,18 @@ public class ReadFEN {
 
                 // check if each row contains exactly 8 squares of information.
                 if (!checkRow(fenRow)) {
-                    System.out.println("Invalid. There should be 8 pieces of information in a row.");
+                    System.out.println("Invalid - There should be 8 pieces of information in a row.");
                     return false;
                 }
 
                 for (int i = 1; i < fenRow.length; i++) {
                     // Check if the character is a valid chess piece or a number 
                     if (!Character.toString(fenRow[i]).matches("[pnbrqkPNBRQK1-8]")) {
-                        System.out.println("Invalid info. Should be either a chess piece or a number");
+                        System.out.println("Invalid info - Should be either a chess piece or a number");
                         return false;
                     }  else { // if it's, check to ensure 2 or more consecutive numbers are not next to each other
                         if (Character.isDigit(fenRow[i-1]) && Character.isDigit(fenRow[i])) {
-                            System.out.println("Invalid: Cannot have 2/more consecutive numbers ");
+                            System.out.println("Invalid - Cannot have 2/more consecutive numbers ");
                             return false;
                         }
                     }
@@ -92,7 +92,7 @@ public class ReadFEN {
         }
         // Check if there are exactly 8 rows
         if (rowAcc != 8) {
-            System.out.println("Invalid. There should be 8 rows.");
+            System.out.println("Invalid - There should be 8 rows.");
             return false;
         }
 
