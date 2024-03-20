@@ -2,13 +2,14 @@
 
 In a land far far away, assuming a pond in the backyard, one lost little fly called Mosca just found a map home. Along its way lie hungry predators like frogs and spiders ready to hunt down and devour Mosca. "Draw" Mosca a way home on the map that also avoids such terrifying forces!
 <br> SNEAK PEEK AT CHARACTERS IN THE GAME:
-<br> <img src="frog.png" width="200" height="200" /> <img src="Moscathefly.png" width="200" height="200" /> <img src="spider.png" width="200" height="200" />
-<br> FROG                           MOSCA                               SPIDER
+| Mosca        | Frog        | Spider      |
+| ------------ | ----------- | ----------- | 
+| <img src="Moscathefly.png" width="100" height="100" />    | <img src="frog.png" width="100" height="100" />   |<img src="spider.png" width="100" height="100" /> |
+
 
 ### How the world works:
-Read and process a text file with the following format: the first line indicates the dimensions of the world (row x column), and the rest of the text lays out how the world is gonna look. Maybe there's no rectangular/square land with a pond but just pretend there was right now. A square/rectangle land suspended mid-air. The game characters are represented with 1 single uncapitalized letter: **s** for *start*, Mosca's starting position; **h** for *home* where Mosca needs to get; **f** for *frog*, which will likely come in multiple; **a** for *another predator*, in this case spiders, as if Mosca's livelihood is not already under imminent threat; finally, **.** for a blank square.
-<br>**Example:** 
-<br>a file like this
+Read and process a text file with the following format: the first line indicates the dimensions of the world (row x column), and the rest of the text lays out how the world is gonna look. Maybe there's no rectangular/square land with a pond but just pretend there was right now. Let's say A square/rectangle land suspended mid-air. The game characters are represented with 1 single uncapitalized letter: **s** for *start*, Mosca's starting position; **h** for *home* where Mosca needs to get; **f** for *frog*, which will likely come in multiple; **a** for *another predator*, in this case spiders, as if Mosca's livelihood is not already under imminent threat; finally, **.** for a blank square.
+<br>**Example: a file like this**
 <br>10 10 
 <br>...f..a..f
 <br>..........
@@ -20,12 +21,13 @@ Read and process a text file with the following format: the first line indicates
 <br>..........
 <br>....s.....
 <br>..........
-will churn out <img src="example.png" width="400" height="400" />
+<br>will churn out 
+<br><img src="example.png" width="400" height="400" />
 
 NO CHARACTER SHOULD MOVE **OFF GRID** OR ELSE THEY WILL FALL DOWN INTO THE ABYSS (again nothing down there!).
 
 ### How Mosca moves:
-The user controls Mosca's movements by arrow keys one space at a time. Every time Mosca moves (ie. the user moves), all present predators should move.
+The user controls Mosca's movements by arrow keys (i.e Mosca can go N/S/E/W) one space at a time. Every time Mosca moves (ie. the user moves), all present predators should move.
 
 ### How frogs operate:
 Frogs are allowed to move North/South/East/West 1 space at a time. Frogs **randomly** move and can only EAT the fly only if they are
