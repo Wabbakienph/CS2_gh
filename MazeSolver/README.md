@@ -31,10 +31,10 @@ The maze layout is specified in a text file format, with the first line indicati
 - If running in the terminal: Compile the code using javac and then run **_java MazeGUI filename s/q_**
 
 ## Algorithm Execution:
-### Utilize a stack or queue algorithm, an _AGENDA_, to explore reachable neighboring locations (not wall, not edge of the maze, and not previously visited as we don't to get stuck in one place) and determine the path to the goal.
+#### Maze Solver utilizes a stack or queue algorithm, an _AGENDA_, to explore reachable neighboring locations (not wall, not edge of the maze, and not previously visited as we don't to get stuck in one place) and determine the path to the goal.
 
 - Queues and stacks have vastly different characteristics as queues do **Breath-first search (BFS)** and stacks **Depth-first search (DFS)**. Therefore, the agenda/valid open space exploration pattern and final path will look different for these two.
-- A QueueAgenda explores step-by-step all the possible ways when faced with an intersection while a StackAgenda finds a single valid way to the goal, disregarding the other open alley (Both mark valid open spaces **$\large{\color{lightgray}{\textsf{LIGHT GRAY}}}$**)
+- A QueueAgenda explores step-by-step all the possible ways when faced with an intersection while a StackAgenda finds a single valid way to the goal, disregarding the other open alley (Both mark valid open spaces added to them **$\large{\color{lightgray}{\textsf{LIGHT GRAY}}}$**)
 
 FOR EXAMPLE: **[mazefile2.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/MazeSolver/mazefile2.txt)**
 
@@ -42,7 +42,7 @@ FOR EXAMPLE: **[mazefile2.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/M
 |----------|--------|
 |<img src="QueueAgenda.png" width="300" height="300"/> |  <img src="StackAgenda.png" width="300" height="300"/>|
 
-- While adding new open spaces , the program constantly keeps track of **visited** locations and visually update them on the GUI by marking **$\large{\color{darkgray}{\textsf{DARK GRAY}}}$**:
+- While adding new open spaces , the program constantly keeps track of **visited** locations and visually update them on the GUI by marking them **$\large{\color{darkgray}{\textsf{DARK GRAY}}}$**:
 <img src="visited.png" width="300" height="300">
 
 - A new 2D array is utilized to keep track of the parent of one or more locations (at intersections the neighboring locations all have the current location as the parent loc).
