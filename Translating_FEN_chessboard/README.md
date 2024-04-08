@@ -21,9 +21,9 @@ position:
 <br> PPP..PPP
 <br> R...K..R
 
-Real chessboard representation:
-| R   | N   |    |   |   | R  | K  |   |
+|Real chessboard representation|
 | --- | --- | -- | --|---| ---|----|---|
+| R   | N   |    |   |   | R  | K  |   |
 | P   | B   | P  | P | Q |    | P  | P |
 |   | P   |   |  | P | B   |   |   |
 |   |    |   |  |  |    | N  | Q  |
