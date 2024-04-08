@@ -16,7 +16,6 @@ class MazeSolver{
 			MazeGridLocation start = m.getStartLocation();
 			MazeGridLocation goal = m.getGoalLocation();
 			m.markVisited(start);
-			mg.visitLoc(start);
 			MazeGridLocation currLoc = start;
 
 			// A new 2D to assign parent location (currLoc) to neighboring locations
@@ -33,21 +32,18 @@ class MazeSolver{
 					}
 				}
 				
-
+			// Mark every visited location (most recent/currLoc) from the agenda
 				if (!agenda.isEmpty()) {
 					m.markVisited(currLoc);
 					mg.visitLoc(currLoc);
-					mg.pause(200);
+					mg.pause(100);
 					currLoc = agenda.removeLocation();
-					m.markVisited(currLoc); // Mark the current location as visited
-					mg.visitLoc(currLoc);
 				} else { // no PASSABLE location insight = crash/no path found
 					System.out.println("No path found.");
 					return new ArrayList<MazeGridLocation>();
 				}
 			}
 			m.markVisited(goal);
-			mg.visitLoc(goal);
 		
 	// PART 2: DRAWING AN ACTUAL SOLUTION
 			/*
@@ -57,7 +53,6 @@ class MazeSolver{
 			while (currLoc != null && !currLoc.equals(start)) {
 				path.add(0, currLoc);
 				mg.addLocToPath(currLoc);
-				// mg.pause(200);
 
 				MazeGridLocation parent = parentMap[currLoc.row][currLoc.col];
 				// parents could be null!
@@ -68,6 +63,6 @@ class MazeSolver{
 			path.add(0, start); // Add the start location to the path
 		}
 
-		return path;
+		return null;
 	}
 }
