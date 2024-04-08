@@ -45,7 +45,7 @@ FOR EXAMPLE: **[mazefile2.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/M
 - While adding new open spaces , the program constantly keeps track of **visited** locations and visually update them on the GUI by marking them **$\large{\color{darkgray}{\textsf{DARK GRAY}}}$**:
 <img src="visited.png" width="300" height="300">
 
-- A new 2D array is utilized to keep track of the parent of one or more locations (at intersections the neighboring locations all have the current location as the parent loc).
+- A new 2D array is employed to keep track of the parent of one or more locations (at intersections the neighboring locations all have the current location as the parent loc).
 - Finally, when the solvability of the maze (can we find an unobstructed way throught to the goal or not using the agenda) is confirmed, **a solution path of the maze is constructed** through backtracking from the goal (the currLoc right now) to its parent location to the parent location of that location all the way to the start. Each parent location is added to the start of the path (so the end result is list of Maze Grid Locations from start to goal) and marked $\large{\color{yellow}{\textsf{YELLOW}}}$. Obviously, there are certain difference in the final paths using a QueueAgenda vs a StackAgenda:
 
 | QueueAgenda | StackAgenda |
@@ -53,6 +53,6 @@ FOR EXAMPLE: **[mazefile2.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/M
 |<img src="pathMaze3_queue.png" width="300" height="300"/> |  <img src="pathMaze3_stack.png" width="300" height="300"/>|
 
 ## Speculative Conclusions
-Upon further testing with different maze layouts/scenarios, it seems like a Stack would find a quicker/shorter path for NARROW, MULTI-INTERSECTION mazes like **[mazefile2.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/MazeSolver/mazefile2.txt)** because it explore 1 single way straight to the goal. On the other hand, more open mazes like **[mazefile3.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/MazeSolver/mazefile3.txt)** and **[openMaze.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/MazeSolver/openMaze.txt)** would benefit from the wide-ranging BFS approach of a **Queue** (the difference between **openMaze.txt q** and **openMaze.txt s** is enormous).
+Upon further testing with different maze layouts/scenarios, it seems like a **Stack** would find a quicker/shorter path for NARROW, MULTI-INTERSECTION mazes like **[mazefile2.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/MazeSolver/mazefile2.txt)** because it explore 1 single way straight to the goal. On the other hand, more open mazes like **[mazefile3.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/MazeSolver/mazefile3.txt)** and **[openMaze.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/MazeSolver/openMaze.txt)** would benefit from the wide-ranging BFS approach of a **Queue** (the difference between **openMaze.txt q** and **openMaze.txt s** is enormous).
 
 
