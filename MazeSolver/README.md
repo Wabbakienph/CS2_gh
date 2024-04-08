@@ -37,7 +37,7 @@ o#......#.
 - A QueueAgenda explores step-by-step all the possible ways when faced with an intersection while a StackAgenda finds a single valid way to the end goal, disregarding the other open alley (Both mark valid open spaces  {\color{lightgray}LIGHT GRAY})
 <br> mazefile2.txt
 | QueueAgenda | StackAgenda |
-|----|---|
+|----------|--------|
 |<img src="QueueAgenda.png" width="300" height="300"/> |  <img src="StackAgenda.png" width="300" height="300"/>|
 
 - While adding new open spaces , the program constantly keeps track of **visited** locations and visually update them on the GUI by marking {\color{darkgray}DARK GRAY}:
