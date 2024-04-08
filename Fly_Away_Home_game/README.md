@@ -4,7 +4,7 @@ In a land far far away, assuming a pond in the backyard, one lost little fly cal
 <br> SNEAK PEEK AT CHARACTERS IN THE GAME:
 | Mosca        | Frog        | Spider      |
 | ------------ | ----------- | ----------- | 
-| <img src="Moscathefly.png" width="100" height="100" />    | <img src="frog.png" width="100" height="100" />   |<img src="spider.png" width="100" height="100" /> |
+| <img src="fly.png" width="100" height="100" />    | <img src="frog.png" width="100" height="100" />   |<img src="spider.png" width="100" height="100" /> |
 
 
 ### How the world works:
