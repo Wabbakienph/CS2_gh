@@ -23,6 +23,7 @@ position:
 
 Real chessboard representation:
 | R   | N   |    |   |   | R  | K  |   |
+| --- | --- | -- | --|---| ---|----|---|
 | P   | B   | P  | P | Q |    | P  | P |
 |   | P   |   |  | P | B   |   |   |
 |   |    |   |  |  |    | N  | Q  |
