@@ -23,21 +23,13 @@ position:
 
 Real chessboard representation:
 | R   | N   |    |   |   | R  | K  |   |
-| --- | --- | -- | --|---| ---|----|---|
 | P   | B   | P  | P | Q |    | P  | P |
-| --- | --- | -- | --|---| ---|----|---|
 |   | P   |   |  | P | B   |   |   |
-| --- | --- | -- | --|---| ---|----|---|
 |   |    |   |  |  |    | N  | Q  |
-| --- | --- | -- | --|---| ---|----|---|
 |   |   |   |P   | N |    |   |   |
-| --- | --- | -- | --|---| ---|----|---|
 |   |   |   | B  |   |    |   |   |
-| --- | --- | -- | --|---| ---|----|---|
 | P   | P   | P  |  |  | P   | P  | P |
-| --- | --- | -- | --|---| ---|----|---|
 | R   |   |    |   | K  |   |   | R  |
-| --- | --- | -- | --|---| ---|----|---|
 
 ### RULES & EXCEPTION HANDLING
 The FEN entered follows an expected format. Here are some rules while processing the input string:
