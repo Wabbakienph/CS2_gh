@@ -33,7 +33,7 @@ o#......#.
 ## Algorithm Execution:
 ### Utilize a stack or queue algorithm, an _AGENDA_, to explore reachable neighboring locations (not wall, not edge of the maze, and not previously visited as we don't to get stuck in one place) and determine the path to the goal.
 
-- Queues and stacks have vastly different characteristics as queues do **Breath-first search (BFS)** and stacks **Depth-first search (DFS)**. Therefore, the agenda/valid open space exploration pattern and final path will look different for these two **$\large{\color{lightgray}{\textsf{LIGHT GRAY}}}$**.
+- Queues and stacks have vastly different characteristics as queues do **Breath-first search (BFS)** and stacks **Depth-first search (DFS)**. Therefore, the agenda/valid open space exploration pattern and final path will look different for these two.
 - A QueueAgenda explores step-by-step all the possible ways when faced with an intersection while a StackAgenda finds a single valid way to the goal, disregarding the other open alley (Both mark valid open spaces **$\large{\color{lightgray}{\textsf{LIGHT GRAY}}}$**)
 
 FOR EXAMPLE: **[mazefile2.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/MazeSolver/mazefile2.txt)**
@@ -44,8 +44,9 @@ FOR EXAMPLE: **[mazefile2.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/M
 
 - While adding new open spaces , the program constantly keeps track of **visited** locations and visually update them on the GUI by marking **$\large{\color{darkgray}{\textsf{DARK GRAY}}}$**:
 <img src="visited.png" width="300" height="300">
+
 - A new 2D array is utilized to keep track of the parent of one or more locations (at intersections the neighboring locations all have the current location as the parent loc).
-- Finally, when the solvability of the maze (can we find an unobstructed way throught to the goal or not using the agenda) is confirmed, **a solution path of the maze is constructed** through backtracking from the goal (the currLoc right now) to its parent location to the parent location of that location all the way to the start. Each parent location is added to the start of the path (so the end result is list of Maze Grid Locations from start to goal) and marked $\large{\color{yellow}{\textsf{YELLOW}}}$ **$\large{\color{lightgray}{\textsf{LIGHT GRAY}}}$**. Obviously, there are certain difference in the final paths using a QueueAgenda vs a StackAgenda:
+- Finally, when the solvability of the maze (can we find an unobstructed way throught to the goal or not using the agenda) is confirmed, **a solution path of the maze is constructed** through backtracking from the goal (the currLoc right now) to its parent location to the parent location of that location all the way to the start. Each parent location is added to the start of the path (so the end result is list of Maze Grid Locations from start to goal) and marked $\large{\color{yellow}{\textsf{YELLOW}}}$. Obviously, there are certain difference in the final paths using a QueueAgenda vs a StackAgenda:
 
 | QueueAgenda | StackAgenda |
 |----------|--------|
