@@ -14,15 +14,15 @@ The maze layout is specified in a text file format, with the first line indicati
 
 **EXAMPLE:**
 [mazefile2.txt](https://github.com/Wabbakienph/CS2_gh/blob/main/MazeSolver/mazefile2.txt)
-8 10                    
-.#........
-.#.######.
-.#....#...
-.###.*#.#.
-...####.#.
-.#.#..#.#.
-.#.#.##.#.
-o#......#.
+<br> 8 10                    
+<br> .#........
+<br> .#.######.
+<br> .#....#...
+<br> .###.*#.#.
+<br> ...####.#.
+<br> .#.#..#.#.
+<br> .#.#.##.#.
+<br> o#......#.
 
 <img src="maze2.png" width="400" height="400" />
 
